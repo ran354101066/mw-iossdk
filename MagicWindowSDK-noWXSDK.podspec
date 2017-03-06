@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
 
-  s.name         = "MagicWindowSDK"
-  s.version      = "3.90.170116"
+  s.name         = "MagicWindowSDK-noWXSDK"
+  s.version      = "3.90.1701161"
   s.summary      = "MagicWindowSDK for Cocoapods convenience."
   s.homepage     = "http://magicwindow.cn/"
   s.license      = "MIT"
   s.author       = { "MagicWindow" => "support@magicwindow.cn" }
-  s.source       = { :git => "https://github.com/magicwindow/mw-iossdk.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/ran354101066/mw-iossdk.git", :tag => "#{s.version}" }
   s.platform     = :ios, "7.0"
   s.requires_arc = true
 s.source_files = "MagicWindowSDK/MagicWindowSDK/*.{h,m}"
@@ -21,12 +21,12 @@ s.xcconfig = {
 s.frameworks = "AdSupport","CoreTelephony","CoreGraphics","CoreFoundation","SystemConfiguration","CoreLocation","WebKit"
 
   # WeChat
-  s.subspec 'WeChat' do |sp|
-  sp.vendored_libraries = "MagicWindowSDK/WeChat/*.a"
-  sp.source_files = "MagicWindowSDK/WeChat/*.{h,m}"
-  sp.public_header_files = "MagicWindowSDK/WeChat/*.h"
-  sp.frameworks = "CFNetwork","Security"
-  sp.libraries = "sqlite3.0","c++","z"
-  end
+  #s.subspec 'WeChat' do |sp|
+  #sp.vendored_libraries = "MagicWindowSDK/WeChat/*.a"
+  #sp.source_files = "MagicWindowSDK/WeChat/*.{h,m}"
+  #sp.public_header_files = "MagicWindowSDK/WeChat/*.h"
+  #sp.frameworks = "CFNetwork","Security"
+  #sp.libraries = "sqlite3.0","c++","z"
+  #end
 
 end
